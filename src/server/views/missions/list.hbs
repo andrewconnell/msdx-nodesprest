@@ -1,0 +1,33 @@
+<h2>Apollo Missions</h2> 
+Select a mission to view details on the mission.
+
+<p>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Mission</th>
+        <th>Rocket</th>
+        <th>Launch Date</th>
+        <th>Commander</th>
+        <th>Sr. Pilot /<br />Command Module Pilot</th>
+        <th>Pilot /<br />Lunar Module Pilot</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each missions}}
+      <tr onclick="javascript:window.location='/missions/{{id}}'">
+        <td>{{title}}</td>
+        <td>{{rocket}}</td>
+        <td>
+          {{#if launchDate}}
+            {{dateFormat launchDate 'MMM DD, YYYY'}}
+          {{/if}}
+        </td>
+        <td>{{commander}}</td>
+        <td>{{srPilotCmPilot}}</td>
+        <td>{{pilotLmPilot}}</td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+</p>

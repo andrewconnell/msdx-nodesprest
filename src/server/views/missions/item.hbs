@@ -1,0 +1,46 @@
+<h2>Apollo Mission Details</h2>
+
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="Title" class="col-sm-2 control-label">Mission</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="Title" value="{{mission.title}}" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="Rocket" class="col-sm-2 control-label">Rocket</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="Rocket" value="{{mission.rocket}}" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="LaunchDate" class="col-sm-2 control-label">Launch Date</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="LaunchDate" value="{{dateFormat mission.launchDate 'MMM DD, YYYY'}}" readonly />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="Commander" class="col-sm-2 control-label">Commander</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="Commander" value="{{mission.commander}}" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="SrPilotCmPilot" class="col-sm-2 control-label">Sr Pilot /<br/>Command Module Pilot</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="SrPilotCmPilot" value="{{mission.srPilotCmPilot}}" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="PilotLmPilot" class="col-sm-2 control-label">Pilot /<br/>Lunar Module Pilot</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="PilotLmPilot" value="{{mission.pilotLmPilot}}" />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-4">
+      <button class="btn btn-default" type="button" onclick="javascript:window.location='/missions'">Go Back</button>
+    </div>
+  </div>
+</form>
